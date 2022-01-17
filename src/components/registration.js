@@ -37,6 +37,7 @@ const PatientRegistration = () => {
         <Row>
           <Column lg={3}></Column>
           <Column lg={6}>
+            <h3>Patient Registration Form</h3>
             <Form onSubmit={handleSubmit}>
               <TextInput
                 name="name"
