@@ -10,6 +10,7 @@ import {
   Button,
 } from "carbon-components-react";
 import styles from "./registration.scss";
+import { RegisterPatient } from "./registration.resource";
 
 const PatientRegistration = () => {
   const [name, setName] = useState("");
@@ -28,7 +29,10 @@ const PatientRegistration = () => {
       nationalID: `${id}`,
       phonenumber: `${phonenumber}`,
     });
-    console.log(data);
+
+    RegisterPatient(data).then((res) => {
+      console.log("successful!!");
+    });
   };
 
   return (
